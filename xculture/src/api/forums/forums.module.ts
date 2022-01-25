@@ -9,3 +9,4 @@ import { ForumsService } from "./forums.service";
     providers: [ForumsService],
 })
 export class ForumsModule {}
+

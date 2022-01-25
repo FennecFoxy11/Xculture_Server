@@ -8,37 +8,32 @@ export class CommentsController {
     @Post()
     async commentForum (
         @Param("forumID") forumID: number,
-        @Body("body") body: string,
-        @Body("author") author: string,
+        @Body("content") body: string,
         @Body("incognito") incognito: boolean
     ) {
-        await this.service.commentForum(forumID, body, author, incognito);
+        await this.service.commentForum(forumID, body, incognito);
     }
 
-    /*
+    
     @Put("/:commentID")
     async editComment (
         @Param("commentID") commentID: number,
-        @Body("body") body: string,
-        @Body("author") author: string,
+        @Body("content") body: string,
         @Body("incognito") incognito: boolean,
     ) {
-        await this.service.updateComment(commentID, body, author, incognito);
+        await this.service.updateComment(commentID, body, incognito);
     }
-    */
+
 
     /*
     @Get("/:commentID/report")
     async getReportDetail() {
-
     }
-
     @Post("/:commentID/report")
     async reportComment() {
-
     }
     */
-    /*
+    
     @Put("/:commentID/favorite")
     async favoriteComment(
         @Param("commentID") commentID: number
@@ -52,5 +47,5 @@ export class CommentsController {
     ) {
         await this.service.unfavoriteComment(commentID)
     }
-    */
+    
 }

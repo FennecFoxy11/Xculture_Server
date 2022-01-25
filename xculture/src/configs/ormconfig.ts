@@ -1,7 +1,10 @@
 import { TypeOrmModuleOptions } from "@nestjs/typeorm";
-import { CommentsEntity } from "src/entity/comment/comment.entity";
+import { TagEntity } from "src/entity/tags/tag.entity";
 import { ForumEntity } from "src/entity/forum/forum.entity";
 import { ReplyEntity } from "src/entity/reply/reply.entity";
+import { ForumTagEntity } from "src/entity/forum/forumTag.entity";
+import { CommentsEntity } from "src/entity/comment/comment.entity";
+
 
 const ormConfig: TypeOrmModuleOptions = {
     type: "mysql",
@@ -17,6 +20,8 @@ const ormConfig: TypeOrmModuleOptions = {
         ForumEntity,
         CommentsEntity,
         ReplyEntity,
+        TagEntity,
+        ForumTagEntity,
     ]     // Table(s) we want to use
 }
 
